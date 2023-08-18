@@ -1,0 +1,14 @@
+{
+    "data_simple": {
+        "phone_send": "93719800034",
+        "phone_receive": "93719800035",
+        "pass": "tdt123",
+        "name_send": "Ztdtsend",
+        "name_receive": "Ztdtreceive"
+    },
+    "data_fail": {
+        "phone_send": "93719800035",
+        "pass": "tdt12345",
+        "error_message": "Tên đăng nhập hoặc mật khẩu không khớp"
+    }  
+}
