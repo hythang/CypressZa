@@ -13,5 +13,5 @@ describe ('Log in Zalo successfully', () => {
         cy.get("input[type='password']").type("tdt123");
         cy.get(".block.btn.btn--m.first").click();
         cy.get(".nav__tabs__zalo").should('be.visible');
-    })
+    });
 })

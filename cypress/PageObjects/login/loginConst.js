@@ -27,7 +27,7 @@ class loginConst {
     }
 
     mainPage() {
-        return cy.get(".nav__tabs__zalo");
+        return cy.get(".nav__tabs__zalo", {timeout: 10000});
     }
 
     txtErrorMessage() {
