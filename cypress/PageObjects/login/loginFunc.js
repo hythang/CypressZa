@@ -1,5 +1,3 @@
-/// <reference types = "cypress"/>
-
 import loginConst from "./loginConst";
 
 class loginFunc {
