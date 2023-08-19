@@ -1,10 +1,7 @@
 {
     "data_simple": {
         "phone_send": "93719800034",
-        "phone_receive": "93719800035",
-        "pass": "tdt123",
-        "name_send": "Ztdtsend",
-        "name_receive": "Ztdtreceive"
+        "pass": "tdt123"
     },
     "data_fail": {
         "phone_send": "93719800034",

@@ -34,4 +34,5 @@ class loginConst {
         return cy.get(".error");
     }
 }
+
 export default loginConst;

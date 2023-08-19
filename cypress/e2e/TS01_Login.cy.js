@@ -1,9 +1,8 @@
-import loginFunc from "../PageObjects/login/loginFunc"
+import loginFunc from "../PageObjects/login/loginFunc";
 
-describe('TS_01: Login', () => {
+describe('TS_01: Login with phone number', () => {
     const loginObj = new loginFunc();
-    let rightData;
-    let wrongData;
+    let rightData, wrongData;
 
     beforeEach(() => {
         // Get data from login.json
@@ -17,7 +16,7 @@ describe('TS_01: Login', () => {
         cy.screenshot();
     });
 
-    it('Login with right account', () => {
+    it('Login successfully with right account', () => {
         loginObj.navigateToLoginPage();
         loginObj.verifyLoginPageIsDisplay();
         loginObj.clickOnLoginWithPhoneNumberTab();
@@ -29,7 +28,7 @@ describe('TS_01: Login', () => {
         Cypress.session.clearAllSavedSessions(); // clear session to be enable to start next test case
     });
 
-    it('Login with wrong account', () => {
+    it('Login unsuccessfully with wrong account', () => {
         loginObj.navigateToLoginPage();
         loginObj.verifyLoginPageIsDisplay();
         loginObj.clickOnLoginWithPhoneNumberTab();
@@ -39,4 +38,4 @@ describe('TS_01: Login', () => {
         loginObj.clickOnLoginButton();
         loginObj.verifyTextLoginFail(wrongData.error_message);
     });
-})
+});
