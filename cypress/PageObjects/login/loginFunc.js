@@ -49,7 +49,18 @@ class loginFunc {
 
     verifyTextLoginFail(text) {
         this.loginFunc.txtErrorMessage().should('contain.text', text);
-        return this
+        return this;
+    }
+
+    navigateToBrowserAndLoginWithPhone(phoneNum, pass) {
+        this.navigateToLoginPage();
+        this.verifyLoginPageIsDisplay();
+        this.clickOnLoginWithPhoneNumberTab();
+        this.selectHeadOfPhoneNumber();
+        this.enterPhoneNumer(phoneNum);
+        this.enterPassword(pass);
+        this.clickOnLoginButton();
+        this.verifyMainPageIsDisplay();
     }
 }
 
