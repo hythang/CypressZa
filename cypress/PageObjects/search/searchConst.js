@@ -2,7 +2,7 @@
 
 class searchConst {
     txtContactSearch() {
-        return cy.get("#contact-search-input");
+        return cy.get("#contact-search-input", {timeout: 10000});
     }
 
     conversationSearchResultByTitle(convName) {
