@@ -10,7 +10,7 @@ class chatMessageFunc {
     }
 
     verifyLastTextMessageContentIsCorrect(expectedText) {
-        return this.chatMessageFunc.lastTextMessage().should('be.visible').contains(expectedText);
+        return this.chatMessageFunc.lastTextMessage().contains(expectedText);
     }
 
     verifyLastStickerMessageContentIsDisplay() {

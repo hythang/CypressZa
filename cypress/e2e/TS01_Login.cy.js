@@ -37,5 +37,6 @@ describe('TS_01: Login with phone number', () => {
         loginObj.enterPassword(wrongData.pass);
         loginObj.clickOnLoginButton();
         loginObj.verifyTextLoginFail(wrongData.error_message);
+        Cypress.session.clearAllSavedSessions();
     });
 });

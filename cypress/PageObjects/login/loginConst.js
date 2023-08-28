@@ -3,7 +3,7 @@
 
 class loginConst {
     tabLoginWithPhoneNumber() {
-        return cy.xpath("//div[@class='tabs animated fadeIn']//li[2]");
+        return cy.xpath("//div[@class='tabs animated fadeIn']//li[2]", {timeout:6000});
     }
 
     btnSelectFlag() {

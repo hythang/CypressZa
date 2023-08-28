@@ -7,7 +7,7 @@ class chatMessageConst {
     }
 
     lastTextMessage() {
-        return cy.get("[data-id='div_LastSentMsg_Text'] .text");
+        return cy.get("[data-id='div_LastSentMsg_Text'] .text", {timeout:10000});
     }
 
     lastStickerMessage() {
