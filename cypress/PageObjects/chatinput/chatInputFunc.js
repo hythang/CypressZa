@@ -33,10 +33,6 @@ class chatInputFunc {
         this.chatInputFunc.emojiTab().click();
     }
 
-    clickOnChatInputNameCardIcon() {
-        this.chatInputFunc.iconNameCard().click();
-    }
-
     enterValueOnSearchStickerBox(value) {
         this.chatInputFunc.inputSearchStickerBox().type(value);
     }
