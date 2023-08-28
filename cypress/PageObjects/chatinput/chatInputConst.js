@@ -22,6 +22,10 @@ class chatInputConst {
         return cy.contains("div-b14", "EMOJI");
     }
 
+    iconNameCard() {
+        return cy.get("[data-translate-title='STR_SEND_CONTACT']");
+    }
+
     inputSearchStickerBox() {
         return cy.get("[data-translate-placeholder='STR_SEARCH_STICKER']");
     }
