@@ -51,7 +51,7 @@ class chatInputConst {
     }
 
     mentionPopover() {
-        return cy.get(".mention-popover__item");
+        return cy.get(".mention-popover__item", {timeout:6000});
     }
 
     itemResultWhenSearchByUtilities(index) {

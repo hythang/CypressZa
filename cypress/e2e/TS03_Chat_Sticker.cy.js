@@ -2,7 +2,6 @@ import chatInputFunc from "../PageObjects/chatinput/chatInputFunc";
 import chatMessageFunc from "../PageObjects/chatmessage/chatMessageFunc";
 import loginFunc from "../PageObjects/login/loginFunc";
 import searchFunc from "../PageObjects/search/searchFunc";
-import tabMessageFunc from "../PageObjects/tabmessage/tabMessageFunc";
 
 let content, account;
 beforeEach(() => {
@@ -16,7 +15,6 @@ describe('TS_03: Send sticker message', () => {
     const searchObj = new searchFunc();
     const chatInputObj = new chatInputFunc();
     const chatMessageObj = new chatMessageFunc();
-    const tabMessageObj = new tabMessageFunc();
 
     beforeEach(() => {
         cy.fixture("message").then((item) => {
