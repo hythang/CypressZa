@@ -28,7 +28,7 @@ describe('TS_03: Send sticker message', () => {
         Cypress.session.clearAllSavedSessions();
     });
 
-    it('Send sticker successfully from Tab sticker', () => {
+    it('CHA_06: Send sticker successfully from Tab sticker', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.clickOnChatInputStickerIcon();
         chatInputObj.enterValueOnSearchStickerBox(content.sticker_search);
@@ -37,7 +37,7 @@ describe('TS_03: Send sticker message', () => {
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send sticker successfully by @STICKER on Chat input', () => {
+    it('CHA_07: Send sticker successfully by @STICKER on Chat input', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.searchStickerAndGifByUtilities("STICKER", content.sticker_search);
         chatInputObj.clickOnResultItemWhenSearchByUtilities();
@@ -45,7 +45,7 @@ describe('TS_03: Send sticker message', () => {
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send sticker successfully by click @ on Chat input', () => {
+    it('CHA_08: Send sticker successfully by click @ on Chat input', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.clickOnUtilitiesIconsearchStickerAndGif("STICKER", content.sticker_search);
         chatInputObj.clickOnResultItemWhenSearchByUtilities();

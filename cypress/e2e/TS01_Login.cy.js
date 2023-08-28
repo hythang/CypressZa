@@ -16,7 +16,7 @@ describe('TS_01: Login with phone number', () => {
         cy.screenshot();
     });
 
-    it('Login successfully with right account', () => {
+    it('LI_01: Login successfully with right account', () => {
         loginObj.navigateToLoginPage();
         loginObj.verifyLoginPageIsDisplay();
         loginObj.clickOnLoginWithPhoneNumberTab();
@@ -28,7 +28,7 @@ describe('TS_01: Login with phone number', () => {
         Cypress.session.clearAllSavedSessions(); // clear session to be enable to start next test case
     });
 
-    it('Login unsuccessfully with wrong account', () => {
+    it('LI_02: Login unsuccessfully with wrong account', () => {
         loginObj.navigateToLoginPage();
         loginObj.verifyLoginPageIsDisplay();
         loginObj.clickOnLoginWithPhoneNumberTab();

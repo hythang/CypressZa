@@ -28,7 +28,7 @@ describe('TS_05: Send Emoji message', () => {
         Cypress.session.clearAllSavedSessions();
     });
 
-    it('Send emoji successfully from Tab emoji', () => {
+    it('CHA_12: Send emoji successfully from Tab emoji', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.clickOnChatInputStickerIcon();
         chatInputObj.clickOnChatInputEmojiTab();
@@ -38,14 +38,14 @@ describe('TS_05: Send Emoji message', () => {
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send valid emoticon successfully', () => {
+    it('CHA_13: Send valid emoticon successfully', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.enterValueWhenOnChatAndSendMessage(content.valid_emoticon);
         chatMessageObj.verifyLastEmojiMessageContentIsDisplay();
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send invalid emoticon successfully', () => {
+    it('CHA_14: Send invalid emoticon successfully', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.enterValueWhenOnChatAndSendMessage(content.invalid_emoticon);
         chatMessageObj.verifyLastTextMessageContentIsCorrect(content.invalid_emoticon);

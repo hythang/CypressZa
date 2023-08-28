@@ -28,21 +28,21 @@ describe('TS_02: Send text message', () => {
         Cypress.session.clearAllSavedSessions();
     });
 
-    it('Send text with 1 character length', () => {
+    it('CHA_01: Send text with 1 character length', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.enterValueWhenOnChatAndSendMessage(textContent.char_one);
         chatMessageObj.verifyLastTextMessageContentIsCorrect(textContent.char_one);
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send text with 497 characters length', () => {
+    it('CHA_02: Send text with 497 characters length', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.enterValueWhenOnChatAndSendMessage(textContent.char_497);
         chatMessageObj.verifyLastTextMessageContentIsCorrect(textContent.char_497);
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send text with 499 characters length and slipt into 2 messages', () => {
+    it('CHA_03: Send text with 499 characters length and slipt into 2 messages', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.enterValueWhenOnChatAndSendMessage(textContent.char_499);
         chatMessageObj.verifyLastTextMessageContentIsCorrect(textContent.expected_char_499);

@@ -28,7 +28,7 @@ describe('TS_04: Send GIF message', () => {
         Cypress.session.clearAllSavedSessions();
     });
 
-    it('Send GIF successfully from Tab GIF', () => {
+    it('CHA_09: Send GIF successfully from Tab GIF', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.clickOnChatInputStickerIcon();
         chatInputObj.clickOnChatInputGifTab();
@@ -38,7 +38,7 @@ describe('TS_04: Send GIF message', () => {
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send GIF successfully by @GIF on Chat input', () => {
+    it('CHA_10: Send GIF successfully by @GIF on Chat input', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.searchStickerAndGifByUtilities("GIF", content.gif_search);
         chatInputObj.clickOnResultItemWhenSearchByUtilities();
@@ -46,7 +46,7 @@ describe('TS_04: Send GIF message', () => {
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
 
-    it('Send GIF successfully by click @ on Chat input', () => {
+    it('CHA_11: Send GIF successfully by click @ on Chat input', () => {
         searchObj.openConversationByName(account.name_receive);
         chatInputObj.clickOnUtilitiesIconsearchStickerAndGif("GIF", content.gif_search);
         chatInputObj.clickOnResultItemWhenSearchByUtilities();
