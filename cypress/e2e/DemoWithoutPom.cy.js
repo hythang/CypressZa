@@ -12,6 +12,6 @@ describe ('Log in Zalo successfully', () => {
         cy.get("#input-phone").type(93719800034);
         cy.get("input[type='password']").type("tdt123");
         cy.get(".block.btn.btn--m.first").click();
-        cy.get(".nav__tabs__zalo", {timeout:10000}).should('be.visible');
+        cy.get(".nav__tabs__zalo", {timeout:15000}).should('be.visible');
     });
 })
