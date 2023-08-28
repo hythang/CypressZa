@@ -24,14 +24,6 @@ class chatMessageFunc {
     verifyLastEmojiMessageContentIsDisplay() {
         return this.chatMessageFunc.lastEmojiMessage().should('be.visible');
     }
-
-    verifyNameCardPhoneNumberIsDisplay(phoneNum) {
-        return this.chatMessageFunc.phoneNumberOnNameCard().contains(phoneNum).should('be.visible');
-    }
-
-    verifyNameCardTextMessageButtonIsDisplay() {
-        return this.chatMessageFunc.btnTextMessageOnNameCard().should('be.visible');
-    }
 }
 
 export default chatMessageFunc;
