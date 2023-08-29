@@ -25,6 +25,18 @@ class chatInputFunc {
         this.chatInputFunc.iconSticker().click();
     }
 
+    clickOnChatInputPriorityIcon() {
+        this.chatInputFunc.iconPriority().click();
+    }
+
+    clickOnImportantMessageOption() {
+        this.chatInputFunc.optionImportantMsg().click();
+    }
+
+    clickOnUrgentMessageOption() {
+        this.chatInputFunc.optionUrgentMsg().click();
+    }
+
     clickOnChatInputGifTab() {
         this.chatInputFunc.gifTab().click();
     }
@@ -73,6 +85,14 @@ class chatInputFunc {
     clickOnResultItemWhenSearchByUtilities() {
         let index = this.generateRandomUtilities(1, 3);
         this.chatInputFunc.itemResultWhenSearchByUtilities(index).should('be.visible').click();
+    }
+
+    verifyThatImportantMessageLabelIsVisibleOnChatInput() {
+        this.chatInputFunc.labelImportantOnChatInput().should('be.visible');
+    }
+
+    verifyThatUrgentMessageLabelIsVisibleOnChatInput() {
+        this.chatInputFunc.labelUrgentOnChatInput().should('be.visible');
     }
 
     verifyQuoteBannerReplyIsDisplay() {

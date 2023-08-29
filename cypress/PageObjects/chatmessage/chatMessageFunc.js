@@ -13,6 +13,14 @@ class chatMessageFunc {
         return this.chatMessageFunc.lastTextMessage().contains(expectedText);
     }
 
+    verifyImportantMessageLabelIsDisplayOnMessage() {
+        return this.chatMessageFunc.labelImportantOnMessage().should('be.visible');
+    }
+
+    verifyUrgentMessageLabelIsDisplayOnMessage() {
+        return this.chatMessageFunc.labelUrgentOnMessage().should('be.visible');
+    }
+
     verifyLastStickerMessageContentIsDisplay() {
         return this.chatMessageFunc.lastStickerMessage().should('be.visible');
     }

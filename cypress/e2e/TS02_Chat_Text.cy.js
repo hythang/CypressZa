@@ -48,4 +48,26 @@ describe('TS_02: Send text message', () => {
         chatMessageObj.verifyLastTextMessageContentIsCorrect(textContent.expected_char_499);
         chatMessageObj.verifyMessageStatusSentIsDisplay();
     });
+
+    it('CHA_04: Send an important text message successfully', () => {
+        searchObj.openConversationByName(account.name_receive);
+        chatInputObj.clickOnChatInputPriorityIcon();
+        chatInputObj.clickOnImportantMessageOption();
+        chatInputObj.verifyThatImportantMessageLabelIsVisibleOnChatInput();
+        chatInputObj.enterValueWhenOnChatAndSendMessage(textContent.normal_text);
+        chatMessageObj.verifyLastTextMessageContentIsCorrect(textContent.normal_text);
+        chatMessageObj.verifyImportantMessageLabelIsDisplayOnMessage();
+        chatMessageObj.verifyMessageStatusSentIsDisplay();
+    });
+
+    it('CHA_05: Send an urgent text message successfully', () => {
+        searchObj.openConversationByName(account.name_receive);
+        chatInputObj.clickOnChatInputPriorityIcon();
+        chatInputObj.clickOnUrgentMessageOption();
+        chatInputObj.verifyThatUrgentMessageLabelIsVisibleOnChatInput();
+        chatInputObj.enterValueWhenOnChatAndSendMessage(textContent.normal_text);
+        chatMessageObj.verifyLastTextMessageContentIsCorrect(textContent.normal_text);
+        chatMessageObj.verifyUrgentMessageLabelIsDisplayOnMessage();
+        chatMessageObj.verifyMessageStatusSentIsDisplay();
+    });
 });
