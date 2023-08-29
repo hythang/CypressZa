@@ -10,6 +10,14 @@ class chatMessageConst {
         return cy.get("[data-id='div_LastSentMsg_Text'] .text", {timeout:10000});
     }
 
+    labelImportantOnMessage() {
+        return cy.get("[data-translate-inner='STR_IMPORTANT']");
+    }
+
+    labelUrgentOnMessage() {
+        return cy.get("[data-translate-inner='STR_URGENT']");
+    }
+
     lastStickerMessage() {
         return cy.xpath("(//div[contains(@class,'sticker-message') and not(contains(@class, '__st'))])[last()]");
     }

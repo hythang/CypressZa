@@ -10,6 +10,26 @@ class chatInputConst {
         return cy.get("[data-translate-inner='STR_SEND']");
     }
 
+    iconPriority() {
+        return cy.get("[data-translate-title='STR_PRIORITY_MSG']");
+    }
+
+    optionImportantMsg() {
+        return cy.get("[data-id='div_IMPT_IMPT']");
+    }
+
+    optionUrgentMsg() {
+        return cy.get("[data-id='div_IMPT_Urgent']");
+    }
+
+    labelImportantOnChatInput() {
+        return cy.get("[data-translate-inner='STR_IMPORTANT']");
+    }
+
+    labelUrgentOnChatInput() {
+        return cy.get("[data-translate-inner='STR_URGENT']");
+    }
+
     iconSticker() {
         return cy.get("[data-translate-title='STR_SEND_STICKER']");
     }
