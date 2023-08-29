@@ -24,6 +24,14 @@ class chatMessageFunc {
     verifyLastEmojiMessageContentIsDisplay() {
         return this.chatMessageFunc.lastEmojiMessage().should('be.visible');
     }
+
+    rightClickOnLastMessage() {
+        return this.chatMessageFunc.lastMessage().rightclick().rightclick();
+    }
+
+    clickOnReplyContext() {
+        return this.chatMessageFunc.contextReply().click();
+    }
 }
 
 export default chatMessageFunc;
