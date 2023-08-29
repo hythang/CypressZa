@@ -74,6 +74,10 @@ class chatInputFunc {
         let index = this.generateRandomUtilities(1, 3);
         this.chatInputFunc.itemResultWhenSearchByUtilities(index).should('be.visible').click();
     }
+
+    verifyQuoteBannerReplyIsDisplay() {
+        this.chatInputFunc.quoteBannerReply().should('be.visible');
+    }
 }
  
 export default chatInputFunc;

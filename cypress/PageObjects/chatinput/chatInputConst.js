@@ -53,6 +53,10 @@ class chatInputConst {
     itemResultWhenSearchByUtilities(index) {
         return cy.xpath("(//div[@id='chat-box-command']//img)[" + index + "]");
     }
+
+    quoteBannerReply() {
+        return cy.get(".quote-banner.rel");
+    }
 }
 
 export default chatInputConst;

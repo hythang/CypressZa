@@ -21,6 +21,14 @@ class chatMessageConst {
     lastEmojiMessage() {
         return cy.xpath("//div[contains(@class,'last-msg has-status')]//*[contains(@id,'mtc')]/span");
     }
+
+    lastMessage() {
+        return cy.get("[data-id='div_LastSentMsg_Text']");
+    }
+
+    contextReply() {
+        return cy.get("[data-id='div_CX_Reply']", {timeout:10000});
+    }
 }
 
 export default chatMessageConst;
